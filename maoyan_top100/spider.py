@@ -9,8 +9,7 @@ import user_agent
 from requests.exceptions import RequestException
 
 filename = 'result.txt'
-file_path = os.path.join(os.getcwd(), filename)
-
+file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), filename)
 
 headers = {'user-agent': user_agent.generate_user_agent()}
 
